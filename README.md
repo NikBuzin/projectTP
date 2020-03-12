@@ -4,7 +4,7 @@
 
 ## Ссылки: 
 -  [Trello](https://trello.com/b/WzYLx2Qd/%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0-6)
--  Miro
+-  [Miro](https://miro.com/app/board/o9J_kunra3U=/)
 -  ТЗ
 
 ## Список участников команды (группа 1.2) и предполагаемое распределение ролей:
