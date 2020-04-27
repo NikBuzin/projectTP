@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Грузинская кухня</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base/css/style.css">
+    <link rel="stylesheet" href="plugins/css/bootstrap.css">
+    <link rel="stylesheet" href="plugins/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="plugins/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="plugins/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="plugins/css/bootstrap-reboot.min.css">
+</head>
+<body>
+<header id="Cap">
+    <div class="container-fluid cap">
+        <div class="row">
+            <div class="col-lg-12 menu">
+                <div class="menu_list">
+                    <ul class="menu_list-ul" >
+                        <li class="accountInfo">
+                            <p>Курьер:"Nickname"</p>
+                        </li>
+                        <li>
+                            <div class="main-logo" style="margin-left:-120px;">
+                                <a href="\">
+                                    <img src="base/img/satsivi-iz-kuritsy-gruzinskaya-kuhnya.png" alt="">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <ul class="menu-last">
+                                <li class="exitButton">
+                                    <a href="authorization">Выход</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="ManagersList">
+    <div class="container">
+        <div class="row managerList">
+            <div class="col-lg-12">
+                <div class="managerListInfo">
+                    <h2>
+                        Список менеджеров:
+                    </h2>
+                </div>
+            </div>
+            <div class="col-lg-12 managerListFirst">
+                <p>
+                    1
+                </p>
+                <p>
+                    Имя Фамилия
+                </p>
+                <div class="managersButton managersButtonEdit">
+                    <a href="#" class="jsModalManagerListEdit fancybox-inline">Редактировать</a>
+                    <div class="filterManagerListEdit"></div>
+                    <div class="modalFormManagerListEdit">
+                        <form class="ManagerListEdit">
+                            <div class="managerListEdit">
+                                <input name="login" type="text" placeholder="Логин">
+                                <input name="password" type="password" placeholder="Пароль">
+                                <input name="name" type="text" placeholder="Имя">
+                                <input name="surname" type="text" placeholder="Фамилия">
+                                <a href="#">Редактировать Менеджера</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="managersButton">
+                    <a href="#">Удалить</a>
+                </div>
+            </div>
+            <div class="col-lg-12 managerListFirst">
+                <p>
+                    2
+                </p>
+                <p>
+                    Имя Фамилия
+                </p>
+                <div class="managersButton managersButtonEdit">
+                    <a href="#" class="jsModalManagerListEdit fancybox-inline">Редактировать</a>
+                    <div class="filterManagerListEdit"></div>
+                    <div class="modalFormManagerListEdit">
+                        <form class="ManagerListEdit">
+                            <div class="managerListEdit">
+                                <input name="login" type="text" placeholder="Логин">
+                                <input name="password" type="password" placeholder="Пароль">
+                                <input name="name" type="text" placeholder="Имя">
+                                <input name="surname" type="text" placeholder="Фамилия">
+                                <a href="#">Редактировать менеджера</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="managersButton">
+                    <a href="#">Удалить</a>
+                </div>
+            </div>
+            <div class="col-lg-12 addManager">
+                <div class="addManagerButton managersButton">
+                    <a href="#" class="JsModalAddManager fancybox-inline">Добавить менеджера</a>
+                    <div id="filterAddManager"></div>
+                    <div id="modalFormAddManager">
+                        <form id="AddManager">
+                            <div class="managerListEdit">
+                                <input name="login" type="text" placeholder="Логин">
+                                <input name="password" type="password" placeholder="Пароль">
+                                <input name="name" type="text" placeholder="Имя">
+                                <input name="surname" type="text" placeholder="Фамилия">
+                                <a href="#">Добавить менеджера</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="base/js/script.js" type="text/javascript"></script>
+</body>
+</html>

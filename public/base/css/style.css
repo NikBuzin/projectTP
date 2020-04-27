@@ -1,0 +1,948 @@
+
+#Cap{
+    background:linear-gradient(to top, #f6f7b8, #b9b9b9);
+}
+#FoodCards{
+    background-color:#f6f7b8;
+}
+#Footer{
+    background-color: #98713b;
+    position:relative;
+}
+#CartMain{
+    background-color:#f6f7b8;
+    min-height: 60vh;
+    position:relative;
+}
+#Login{
+    min-height: 60vh;
+    background-color:#f6f7b8;
+}
+#CourierPA{
+    min-height: 79vh;
+    background-color:#f6f7b8;
+}
+#ManagerPA{
+    min-height: 79vh;
+    background-color:#f6f7b8;
+}
+#CouriersList{
+    min-height: 79vh;
+    background-color:#f6f7b8;
+}
+#ActiveOrders{
+    min-height: 79vh;
+    background-color:#f6f7b8;
+}
+#ManagersList{
+    min-height: 79vh;
+    background-color:#f6f7b8;
+}
+#PurchaseHistory{
+    min-height: 79vh;
+    background-color:#f6f7b8;
+}
+#FoodList{
+    min-height: 79vh;
+    background-color:#f6f7b8;
+}
+.menu{
+    margin-top:20px;
+}
+.menu_list ul{
+    display: flex;
+    justify-content:space-around;
+    padding-left: 0;
+}
+.menu_list li{
+    list-style-type: none;
+    position: relative;
+}
+.menu_list_active:hover .menu-block {
+    display: block;
+    position:absolute;
+    z-index:1;
+}
+.menu-block{
+    display:none;
+}
+.menu-block a{
+    display:flex;
+    border: 1px solid #000;
+    background-color:white;
+    color:black;
+    padding:5px 20px 8px 20px;
+}
+.menu-block a:hover{
+    color:black;
+    text-decoration: none;
+}
+.menu-block p{
+    width:170px;
+}
+.menu-block-list:first-child{
+    margin-top: 8px;
+}
+.menu_list_active{
+    margin-top: 45px;
+}
+.menu_list_main {
+    border: 1px solid #000;
+    background-color:white;
+    color:black;
+    padding:5px 20px 8px 20px;
+    margin-bottom:5px;
+    cursor: default;
+}
+.menu_list_main:hover {
+    cursor: default;
+    color:black;
+    text-decoration: none;
+}
+.cart-logo svg{
+    height:50px;
+    width:50px;
+}
+.menu-last {
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+.menu-last li{
+    display: flex;
+    justify-content:center;
+}
+.cart-logo-header{
+    width:137px;
+    text-align: center;
+}
+.main-logo img{
+    width:150px;
+    height:120px;
+    margin-left: 35px;
+}
+#modalFormCart{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    display: none;
+}
+#filterCart{
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+.infoCart{
+    border: 1px solid #000;
+    padding: 30px;
+    text-align:center;
+    background-color:white;
+}
+.infoCartOrder{
+    display: flex;
+    padding-right: 10px;
+}
+.infoCartOrder p:first-child{
+    padding-right: 10px;
+}
+.infoCart a{
+     border: 1px solid #000;
+     background-color:white;
+     color:black;
+     padding:5px 20px 8px 20px;
+     margin-bottom:5px;
+ }
+.infoCart a:hover{
+    color:black;
+    text-decoration: none;
+}
+
+.authorizationButton a{
+    border: 1px solid #000;
+    background-color:white;
+    color:black;
+    padding:5px 20px 8px 20px;
+    margin-top:15px;
+}
+.authorizationButton a:hover{
+    text-decoration: none;
+    color:black;
+}
+.dishes{
+    display: flex;
+    justify-content:space-around;
+    padding-top:150px;
+}
+.dishesMore{
+    display: flex;
+    justify-content:space-around;
+    padding-top:50px;
+    padding-bottom:100px;
+}
+.foodCards{
+    position: relative;
+    padding-top: 10px;
+    margin-bottom:20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color:white;
+    max-width:285px !important;
+}
+
+.foodCards img{
+    width:255px;
+    height:200px;
+}
+.foodCardsDescription h2{
+    font-size:25px;
+}
+.foodCardsDescription p{
+    font-size:14px;
+}
+.foodCardsDescriptionMore{
+    display: flex;
+    justify-content:space-between;
+}
+.foodCardsDescriptionMore p{
+    font-size:25px;
+}
+.foodCardsDescriptionMore a{
+    border: 1px solid #000;
+    background-color:white;
+    color:black;
+    padding:5px 10px 7px 10px;
+    position:absolute;
+    right: 15px;
+    border-radius:7px;
+}
+.foodCardsDescriptionMore a:hover{
+    color:black;
+    text-decoration: none;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+.footer{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.footerLogo img{
+    width:80px;
+    height:80px;
+}
+.aboutUs{
+    position:relative;
+    top: 30%;
+}
+.aboutUs a{
+    text-transform:uppercase;
+    font-size:16px;
+    color:white;
+    font-weight:700;
+}
+.aboutUs a:hover{
+    text-decoration: none;
+    color:black;
+    transition:0.3s;
+}
+.social{
+    display: flex;
+    position:relative;
+    top: 20%;
+}
+.socialFace svg{
+    width:40px;
+    height:40px;
+    fill:white;
+}
+.socialVK svg{
+    width:40px;
+    height:40px;
+    fill:white;
+}
+.socialInst svg{
+    width:40px;
+    height:40px;
+    fill:white;
+}
+.socialFace svg:hover{
+    fill:black;
+    transition:0.3s
+}
+.socialVK svg:hover{
+    fill:black;
+    transition:0.3s
+}
+.socialInst svg:hover{
+    fill:black;
+    transition:0.3s
+}
+.cart-logo-in-cart {
+    margin-top: 20px;
+}
+.cart-logo-in-cart svg{
+    height:50px;
+    width:50px;
+}
+.cartMain{
+    margin-top:50px;
+}
+.cartMain h2{
+    text-align: center;
+}
+.cartOrder{
+    display: flex;
+    justify-content:space-around;
+}
+.cartInfo{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+.cartOrder p{
+    margin-top:5px;
+}
+.cartOrder div{
+    margin-top:5px;
+}
+.cartOrder a {
+    display: inline-block;
+    color: black;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cartOrder a:after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 1px;
+    margin-top:2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.cartOrder a:hover{
+    text-decoration: none;
+    color: black;
+}
+.cartOrder a:hover:after,
+.cartOrder a:focus:after {
+    width: 100%;
+}
+.cartOrderButton{
+    text-align:center;
+    margin-top: 50px;
+    margin-bottom:50px;
+}
+#modalOrderButton{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    display: none;
+}
+#filterOrderButton{
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+.orderButtonInfo{
+    border: 1px solid #000;
+    padding: 30px;
+    text-align:center;
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.orderButtonInfoCheck{
+    display: flex;
+}
+.orderButtonInfoCheck p{
+    margin-top:2px;
+    margin-left: 5px;
+}
+.orderButtonInfoCheckButtons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.cartOrderButtonActive {
+    display: inline-block;
+    color: black;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    font-size:20px;
+}
+.cartOrderButtonActive:after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 2px;
+    margin-top:2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.cartOrderButtonActive:hover{
+    text-decoration: none;
+    color: black;
+}
+.cartOrderButtonActive:hover:after,
+.cartOrderButtonActive:focus:after {
+    width: 100%;
+}
+.orderButtonInfo input {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.27);
+    border:none;
+    background-repeat: no-repeat;
+    background-position: 12px 50%;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.orderButtonInfoCheckButtons p {
+    display: inline-block;
+    color: black;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    font-size:16px;
+}
+.orderButtonInfoCheckButtons p:after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 2px;
+    margin-top:2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.orderButtonInfoCheckButtons p:hover{
+    text-decoration: none;
+    color: black;
+}
+.orderButtonInfoCheckButtons p:hover:after,
+.orderButtonInfoCheckButtons p:focus:after {
+    width: 100%;
+}
+.login{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+.headerAutorization{
+    min-height: 156px;
+
+}
+.login img{
+    height:120px;
+    width:160px;
+}
+.login input {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.27);
+    border:none;
+    background-repeat: no-repeat;
+    background-position: 12px 50%;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+.login a {
+    display: inline-block;
+    color: black;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    font-size:16px;
+}
+.login a:after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 2px;
+    margin-top:2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.login a:hover{
+    text-decoration: none;
+    color: black;
+}
+.login a:hover:after,
+.login a:focus:after {
+    width: 100%;
+}
+.exitButton a{
+    border: 1px solid #000;
+    background-color:white;
+    color:black;
+    padding:5px 20px 8px 20px;
+    margin-top:30px;
+}
+.exitButton a:hover{
+    text-decoration: none;
+    color:black;
+}
+.accountInfo p{
+    border: 1px solid #000;
+    background-color:white;
+    color:black;
+    padding:5px 20px 8px 20px;
+    margin-bottom:5px;
+    cursor: default;
+    margin-top:40px;
+}
+.courierMenu {
+    display: flex;
+    justify-content:center;
+    margin-top: 100px;
+}
+.courierMenu div{
+    border: 1px solid #000;
+    padding: 0 30px;
+}
+.courierMenu div:nth-child(2){
+    border: 1px solid #000;
+    border-left: 0;
+    padding: 0 80px;
+}
+.courierMenu div:nth-child(3){
+    border: 1px solid #000;
+    border-left: 0;
+    padding:0 118px 0 117px;
+}
+.courierMenuChild{
+    display: flex;
+    justify-content:center;
+}
+.courierMenuChild div{
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding:0 34px 0 35px;
+}
+.courierMenuChild div:nth-child(2){
+    padding: 0 80px;
+    border-left: 0;
+}
+.courierMenuChild div:nth-child(3){
+    padding: 0 80px;
+    border-left: 0;
+}
+.courierMenu p{
+    margin:3px 3px 5px 3px;
+}
+.courierMenuChild p{
+    margin:3px 3px 5px 3px;
+}
+.courierMenuChildSelect select{
+    background-color:rgba(255, 255, 255, 0.27);
+    padding-left:20px;
+    padding-bottom: 3px;
+}
+.managerMenu {
+    display: flex;
+    justify-content:space-between;
+    margin-top:150px;
+}
+.managerMenu a{
+    border: 1px solid #000;
+    background-color:white;
+    color:black;
+    padding:15px 30px 18px 30px;
+    margin-bottom:5px;
+    cursor: default;
+    margin-top:40px;
+}
+.managerMenu a:hover{
+    color:black;
+    cursor: pointer;
+    text-decoration: none;
+}
+.courierListInfo{
+    display: flex;
+    justify-content:center;
+    margin-top:30px;
+}
+.courierListInfo h2{
+    font-size:30px;
+    font-weight:normal;
+    margin-bottom:50px;
+}
+.courierListFirst {
+    display: flex;
+}
+.courierListFirst p{
+    margin-right:20px;
+}
+.couriersButtonEdit {
+    margin-left:50px;
+}
+.modalFormCourierListEdit{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    display: none;
+}
+.filterCourierListEdit{
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top:0;
+    right: 0;
+    left: -20px;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+#modalFormAddCourier{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    display: none;
+}
+#filterAddCourier{
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top:0;
+    right: 0;
+    left: -20px;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+.couriersButton a {
+    display: inline-block;
+    color: black;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    font-size:16px;
+    padding-left:20px;
+}
+.couriersButton a:after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 2px;
+    margin-top:2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.couriersButton a:hover{
+    text-decoration: none;
+    color: black;
+}
+.couriersButton a:hover:after,
+.couriersButton a:focus:after {
+    width: 100%;
+}
+.courierListEdit{
+    border: 1px solid #000;
+    padding: 30px;
+    text-align:center;
+    background-color:white;
+    flex-direction:column;
+    display: flex;
+}
+.courierListEdit input{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.27);
+    border:none;
+    background-repeat: no-repeat;
+    background-position: 12px 50%;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+.courierListEdit input:nth-child(4){
+    margin-bottom:20px;
+}
+.addCourier{
+    margin-top:100px;
+    display: flex;
+    justify-content:center;
+}
+.activeOrders {
+    display: flex;
+    justify-content:center;
+    margin-top: 100px;
+}
+.activeOrders div{
+    border: 1px solid #000;
+    padding: 0 30px;
+}
+.activeOrders div:nth-child(2){
+    border: 1px solid #000;
+    border-left: 0;
+    padding: 0 80px;
+}
+.activeOrders div:nth-child(3){
+    border: 1px solid #000;
+    border-left: 0;
+    padding:0 118px 0 117px;
+}
+.activeOrders div:nth-child(4){
+    border: 1px solid #000;
+    border-left: 0;
+    padding:0 142px 0 142px;
+}
+.activeOrders p{
+    margin:3px 3px 5px 3px;
+}
+.activeOrdersChild p{
+    margin:3px 3px 5px 3px;
+}
+.activeOrdersChild{
+    display: flex;
+    justify-content:center;
+}
+.activeOrdersChild div{
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding:0 34px 0 35px;
+}
+.activeOrdersChild div:nth-child(2){
+    padding:0 80px;
+    border-left: 0;
+}
+.activeOrdersChild div:nth-child(3){
+    padding: 0 80px;
+    border-left: 0;
+}
+.activeOrdersChild div:nth-child(4){
+    padding:0 80px;
+    border-left: 0;
+}
+.managerListInfo{
+    display: flex;
+    justify-content:center;
+    margin-top:30px;
+}
+.managerListInfo h2{
+    font-size:30px;
+    font-weight:normal;
+    margin-bottom:50px;
+}
+.managerListFirst {
+    display: flex;
+}
+.managerListFirst p{
+    margin-right:20px;
+}
+.managersButtonEdit {
+    margin-left:50px;
+}
+.modalFormManagerListEdit{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    display: none;
+}
+.filterManagerListEdit{
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top:0;
+    right: 0;
+    left: -20px;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+#modalFormAddManager{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    display: none;
+}
+#filterAddManager{
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top:0;
+    right: 0;
+    left: -20px;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+.managersButton a {
+    display: inline-block;
+    color: black;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    font-size:16px;
+    padding-left:20px;
+}
+.managersButton a:after {
+    background-color: black;
+    display: block;
+    content: "";
+    height: 2px;
+    margin-top:2px;
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.managersButton a:hover{
+    text-decoration: none;
+    color: black;
+}
+.managersButton a:hover:after,
+.managersButton a:focus:after {
+    width: 100%;
+}
+.managerListEdit{
+    border: 1px solid #000;
+    padding: 30px;
+    text-align:center;
+    background-color:white;
+    flex-direction:column;
+    display: flex;
+}
+.managerListEdit input{
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.27);
+    border:none;
+    background-repeat: no-repeat;
+    background-position: 12px 50%;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+.managerListEdit input:nth-child(4){
+    margin-bottom:20px;
+}
+.addManager{
+    margin-top:100px;
+    display: flex;
+    justify-content:center;
+}
+.purchaseHistory {
+    display: flex;
+    justify-content:center;
+    margin-top: 100px;
+}
+.purchaseHistory p{
+    margin:3px 3px 5px 3px;
+}
+.purchaseHistory div{
+    border: 1px solid #000;
+    padding: 0 30px;
+}
+.purchaseHistory div:nth-child(2){
+    border: 1px solid #000;
+    border-left: 0;
+    padding: 0 80px;
+}
+.purchaseHistory div:nth-child(3){
+    border: 1px solid #000;
+    border-left: 0;
+    padding: 0 80px;
+}
+.purchaseHistory div:nth-child(4){
+    border: 1px solid #000;
+    border-left: 0;
+    padding: 0 80px;
+}
+.purchaseHistoryChild p{
+    margin:3px 3px 5px 3px;
+}
+.purchaseHistoryChild{
+    display: flex;
+    justify-content:center;
+}
+.purchaseHistoryChild div{
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding:0 34px 0 35px;
+}
+.purchaseHistoryChild div:nth-child(2){
+    padding:0 80px;
+    border-left: 0;
+}
+.purchaseHistoryChild div:nth-child(3){
+    padding: 0 80px;
+    border-left: 0;
+}
+.purchaseHistoryChild div:nth-child(4){
+    padding:0 80px;
+    border-left: 0;
+}
+.food{
+    margin-top:50px;
+}
+.foodList {
+    display: flex;
+}
+.foodListContainer{
+    border: 1px solid #000;
+    padding: 0 30px;
+}
+.foodListContainer p{
+    margin:3px 3px 5px 3px;
+}
+.foodButton {
+    margin-top:5px;
+}
+.addFood{
+    display: flex;
+    justify-content:center;
+    margin-top:150px;
+}
+
