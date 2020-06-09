@@ -12,10 +12,10 @@ class HomeController extends AbstractController
         */
     public function number()
     {
-        $number = random_int(0, 100);
-
+        $foods = $this->getDoctrine()->getRepository('App:Food')->findAll();
+        session_start();
         return $this->render('home.html.twig', [
-            'number' => $number,
+            'foods' => $foods,
         ]);
     }
 }

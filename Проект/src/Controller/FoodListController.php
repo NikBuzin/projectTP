@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,10 +13,11 @@ class FoodListController extends AbstractController
      */
     public function number()
     {
-        $number = random_int(0, 100);
+        $foods = $this->getDoctrine()->getRepository('App:Food')->findAll();
 
         return $this->render('foodList.html.twig', [
-            'number' => $number,
+            'foods' => $foods,
         ]);
+
     }
 }

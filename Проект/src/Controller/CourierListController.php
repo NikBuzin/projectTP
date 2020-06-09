@@ -10,12 +10,13 @@ class CourierListController extends AbstractController
     /**
      * @Route("/couriersList")
      */
-    public function number()
+    public function show()
     {
-        $number = random_int(0, 100);
+        $couriers = $this->getDoctrine()->getRepository('App:Courier')->findAll();
 
         return $this->render('couriersList.html.twig', [
-            'number' => $number,
+            'couriers' => $couriers,
         ]);
+
     }
 }

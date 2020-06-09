@@ -10,12 +10,14 @@ class AuthorizationController extends AbstractController
     /**
      * @Route("/authorization")
      */
-    public function number()
+    public function show()
     {
-        $number = random_int(0, 100);
 
         return $this->render('authorization.html.twig', [
-            'number' => $number,
+            'session' => session_id(),
         ]);
     }
+    /**
+     * @Route("/login")
+     */
 }

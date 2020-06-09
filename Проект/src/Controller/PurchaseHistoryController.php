@@ -10,12 +10,12 @@ class PurchaseHistoryController extends AbstractController
     /**
      * @Route("/purchaseHistory")
      */
-    public function number()
+    public function show()
     {
-        $number = random_int(0, 100);
+        $orders = $this->getDoctrine()->getRepository('App:Order')->findAll();
 
         return $this->render('purchaseHistory.html.twig', [
-            'number' => $number,
+            'orders' => $orders,
         ]);
     }
 }

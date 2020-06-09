@@ -54,98 +54,47 @@
                         <p>Название блюда</p>
                     </div>
                     <div class="foodListContainer">
-                        <p>Состав</p>
-                    </div>
-                    <div class="foodListContainer">
                         <p>Описание</p>
                     </div>
                     <div class="foodListContainer">
                         <p>Стоимость</p>
                     </div>
                 </div>
+                {% for food in foods %}
+                <form id="EditFood">
                 <div class="foodList">
                     <div class="foodListContainer">
-                        <p>№</p>
+                        <p>{{ food.id }}</p>
                     </div>
                     <div class="foodListContainer">
-                        <p>Название блюда</p>
+                        <p>{{ food.name }}</p>
                     </div>
                     <div class="foodListContainer">
-                        <p>Состав</p>
+                        <p>{{ food.description }}</p>
                     </div>
                     <div class="foodListContainer">
-                        <p>Описание</p>
+                        <p>{{ food.price }}</p>
                     </div>
-                    <div class="foodListContainer">
-                        <p>Стоимость</p>
-                    </div>
-                    <div class="managersButton managersButtonEdit foodButton">
-                        <a href="#" class="jsModalManagerListEdit fancybox-inline">Редактировать</a>
-                        <div class="filterManagerListEdit"></div>
-                        <div class="modalFormManagerListEdit">
-                            <form class="ManagerListEdit">
-                                <div class="managerListEdit">
-                                    <input name="login" type="text" placeholder="Логин">
-                                    <input name="password" type="password" placeholder="Пароль">
-                                    <input name="name" type="text" placeholder="Имя">
-                                    <input name="surname" type="text" placeholder="Фамилия">
-                                    <a href="#">Редактировать блюдо</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+
                     <div class="managersButton foodButton">
-                        <a href="#">Удалить</a>
+                        <a href="/editFoodList?id={{ food.id }}">Редактировать блюда</a>
+                        <a href="/removeFoodList?id={{ food.id }}">Удалить</a>
                     </div>
                 </div>
-                <div class="foodList">
-                    <div class="foodListContainer">
-                        <p>№</p>
-                    </div>
-                    <div class="foodListContainer">
-                        <p>Название блюда</p>
-                    </div>
-                    <div class="foodListContainer">
-                        <p>Состав</p>
-                    </div>
-                    <div class="foodListContainer">
-                        <p>Описание</p>
-                    </div>
-                    <div class="foodListContainer">
-                        <p>Стоимость</p>
-                    </div>
-                    <div class="managersButton managersButtonEdit foodButton">
-                        <a href="#" class="jsModalManagerListEdit fancybox-inline">Редактировать</a>
-                        <div class="filterManagerListEdit"></div>
-                        <div class="modalFormManagerListEdit">
-                            <form class="ManagerListEdit">
-                                <div class="managerListEdit">
-                                    <input name="title" type="text" placeholder="Название">
-                                    <input name="structure" type="text" placeholder="Состав">
-                                    <input name="description" type="text" placeholder="Описание">
-                                    <input name="price" type="text" placeholder="Цена">
-                                    <a href="#">Редактировать блюдо</a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="managersButton foodButton">
-                        <a href="#">Удалить</a>
-                    </div>
-                </div>
+                {% endfor %}
+                </form>
             </div>
             <div class="col-lg-12 addFood">
                 <div class="managersButton">
                     <a href="#" class="JsModalAddManager fancybox-inline">Добавить блюдо</a>
                     <div id="filterAddManager"></div>
                     <div id="modalFormAddManager">
-                        <form id="AddManager">
+                        <form id="AddManager" method="post" action="/addFood">
                             <div class="managerListEdit">
                                 <input name="title" type="text" placeholder="Название">
-                                <input name="structure" type="text" placeholder="Состав">
                                 <input name="description" type="text" placeholder="Описание">
                                 <input name="price" type="text" placeholder="Цена">
-                                <a href="#">Добавить блюдо</a>
+                                <p><input type="submit" name="submit" value="Добавить блюдо"></p>
                             </div>
                         </form>
                     </div>

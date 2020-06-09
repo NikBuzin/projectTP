@@ -10,12 +10,13 @@ class ManagersListController extends AbstractController
     /**
      * @Route("/managersList")
      */
-    public function number()
+    public function show()
     {
-        $number = random_int(0, 100);
+        $managers = $this->getDoctrine()->getRepository('App:Manager')->findAll();
 
         return $this->render('managersList.html.twig', [
-            'number' => $number,
+            'managers' => $managers,
         ]);
+
     }
 }

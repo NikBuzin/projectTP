@@ -10,13 +10,37 @@ class CartController extends AbstractController
     /**
      * @Route("/cart")
      */
-    public function number()
+    public function show()
     {
-        $number = random_int(0, 100);
-
+        session_start();
+        foreach ($_SESSION['stash'] as $id) {
+            $foods[] = $this->getDoctrine()->getRepository('App:Food')->find((int)$id);
+        }
         return $this->render('cart.html.twig', [
-            'number' => $number,
+            'session' => session_id(),
+            'foods' => $foods,
         ]);
     }
+    /**
+     * @Route("/deleteFoodFromStash")
+     */
+    public function deleteFood(){
+        session_start();
+        foreach ($_SESSION['stash'] as $order){
+            unset($_SESSION['stash'][array_search($_GET['id'] , $_SESSION['stash'])]);
+        }
+        dump($_SESSION['stash']);
+        foreach ($_SESSION['stash'] as $id) {
+            $foods[] = $this->getDoctrine()->getRepository('App:Food')->find((int)$id);
+        }
+        if(empty($foods)){
+            return $this->redirect('/');
+        }
+        return $this->render('cart.html.twig', [
+            'session' => session_id(),
+            'foods' => $foods,
+        ]);
+    }
+
 }
 

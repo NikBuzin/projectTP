@@ -51,28 +51,33 @@
                         <p>№</p>
                     </div>
                     <div>
-                        <p>"Пример заказа"</p>
+                        <p>Описание</p>
+                    </div>
+                    <div>
+                        <p>Адрес</p>
                     </div>
                     <div>
                         <p>Статус</p>
                     </div>
-                    <div>
-                        <p>Курьер</p>
-                    </div>
                 </div>
                 <div class="purchaseHistoryChild">
+                    {% for order in orders %}
                     <div>
                         <p>1</p>
                     </div>
                     <div>
-                        <p>"Пример заказа"</p>
+                        <p>{{ order.id }}</p>
                     </div>
                     <div>
-                        <p>Статус</p>
+                        <p>{{ order.description }}</p>
                     </div>
                     <div>
-                        <p>Курьер</p>
+                        <p>{{ order.adress }}</p>
                     </div>
+                    <div>
+                        <p>{{ order.status }}</p>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

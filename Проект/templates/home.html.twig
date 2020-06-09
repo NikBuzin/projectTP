@@ -60,16 +60,16 @@
                                             <form id="Cart">
                                                 <div class="infoCart">
                                                     <h2>Ваш заказ:</h2>
-                                                    <div class="infoCartOrder">
-                                                        <p>
-                                                            1.Пример заказа
-                                                        </p>
-                                                        <p>
-                                                            N
-                                                        </p>
-
-                                                    </div>
-                                                    <a href="cart">Оформить заказ</a>
+                                                    {% if foodStash is defined %}
+                                                    {% for foodstash in foodStash %}
+                                                        <div class="infoCartOrder">
+                                                            <p>
+                                                                {{ foodstash.id }}. {{ foodstash.name }}
+                                                            </p>
+                                                        </div>
+                                                    {% endfor %}
+                                                    {% endif %}
+                                                    <a href="/cart">Оформить заказ</a>
                                                 </div>
                                             </form>
                                         </div>
@@ -89,112 +89,21 @@
 <section id="FoodCards">
     <div class="container-fluid">
         <div class="row dishes">
+            {% for food in foods %}
             <div class="col-lg-3 foodCards">
                 <img src="base/img/dishes/kare.jpg" alt="">
                 <div class="foodCardsDescription">
-                    <h2>Баранина корейка</h2>
-                    <p>Состав:баранина, лаваш, соус томатный</p>
+                    <h2>{{ food.name }}</h2>
+                    <p>{{food.description}}</p>
                     <div class="foodCardsDescriptionMore">
                         <p>
-                            560₽
+                            {{ food.price }}
                         </p>
-                        <a href="">В корзину</a>
+                        <a href="/addToStash?id={{ food.id }}">В корзину</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 foodCards">
-                <img src="base/img/dishes/kare.jpg" alt="">
-                <div class="foodCardsDescription">
-                    <h2>Баранина корейка</h2>
-                    <p>Состав:баранина, лаваш, соус томатный</p>
-                    <div class="foodCardsDescriptionMore">
-                        <p>
-                            560₽
-                        </p>
-                        <a href="">В корзину</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 foodCards">
-                <img src="base/img/dishes/kare.jpg" alt="">
-                <div class="foodCardsDescription">
-                    <h2>Баранина корейка</h2>
-                    <p>Состав:баранина, лаваш, соус томатный</p>
-                    <div class="foodCardsDescriptionMore">
-                        <p>
-                            560₽
-                        </p>
-                        <a href="">В корзину</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 foodCards">
-                <img src="base/img/dishes/kare.jpg" alt="">
-                <div class="foodCardsDescription">
-                    <h2>Баранина корейка</h2>
-                    <p>Состав:баранина, лаваш, соус томатный</p>
-                    <div class="foodCardsDescriptionMore">
-                        <p>
-                            560₽
-                        </p>
-                        <a href="">В корзину</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row dishesMore">
-            <div class="col-lg-3 foodCards">
-                <img src="base/img/dishes/kare.jpg" alt="">
-                <div class="foodCardsDescription">
-                    <h2>Баранина корейка</h2>
-                    <p>Состав:баранина, лаваш, соус томатный</p>
-                    <div class="foodCardsDescriptionMore">
-                        <p>
-                            560₽
-                        </p>
-                        <a href="">В корзину</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 foodCards">
-                <img src="base/img/dishes/kare.jpg" alt="">
-                <div class="foodCardsDescription">
-                    <h2>Баранина корейка</h2>
-                    <p>Состав:баранина, лаваш, соус томатный</p>
-                    <div class="foodCardsDescriptionMore">
-                        <p>
-                            560₽
-                        </p>
-                        <a href="">В корзину</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 foodCards">
-                <img src="base/img/dishes/kare.jpg" alt="">
-                <div class="foodCardsDescription">
-                    <h2>Баранина корейка</h2>
-                    <p>Состав:баранина, лаваш, соус томатный</p>
-                    <div class="foodCardsDescriptionMore">
-                        <p>
-                            560₽
-                        </p>
-                        <a href="">В корзину</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 foodCards">
-                <img src="base/img/dishes/kare.jpg" alt="">
-                <div class="foodCardsDescription">
-                    <h2>Баранина корейка</h2>
-                    <p>Состав:баранина, лаваш, соус томатный</p>
-                    <div class="foodCardsDescriptionMore">
-                        <p>
-                            560₽
-                        </p>
-                        <a href="">В корзину</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
