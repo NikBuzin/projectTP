@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ManagerPAController extends AbstractController
 {
     /**
+     * Show manager account
      * @Route("/managerPA")
      */
     public function number()

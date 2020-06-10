@@ -20,14 +20,7 @@
                 <div class="menu_list">
                     <ul class="menu_list-ul">
                         <li class="menu_list_active">
-                            <a href="#" class="menu_list_main">Меню</a>
-                            <div class="menu-block">
-                                <p class="menu-block-list">
-                                    <a href="#">Первые блюда</a>
-                                    <a href="#">Вторые блюда</a>
-                                    <a href="#">Шашлыки</a>
-                                </p>
-                            </div>
+
                         </li>
                         <li>
                             <div class="main-logo">
@@ -57,19 +50,26 @@
             {% for food in foods %}
             <div class="col-lg-4 cartOrder">
                 <p>
-                    {{ food.id }}. {{ food.name }}
+                    №: {{ food.id }}.
+                </p>
+                <p>
+                    Название: {{ food.name }}.
                 </p>
                 <p>
                     <input  type="number" name="{{ food.id }}" value="1" min="1" required>
+                </p>
+                <p>
+                    Ценa:
+                </p>
+                <p>
+                    {{ food.price }}
                 </p>
                 <p>
                     <a href="/deleteFoodFromStash?id={{ food.id }}">
                         Удалить
                     </a>
                 </p>
-                <p>
-                    Ценa: {{ food.price }}
-                </p>
+
 
             </div>
 

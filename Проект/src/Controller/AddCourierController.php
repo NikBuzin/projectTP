@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AddCourierController extends AbstractController
 {
     /**
+     * Add couriers to database
      * @Route("/addCourier")
      */
     public function number()
@@ -18,6 +19,7 @@ class AddCourierController extends AbstractController
         $courier->setName($_REQUEST['name']);
         $courier->setLogin($_REQUEST['login']);
         $courier->setPassword($_REQUEST['password']);
+        $courier->setActivity('none');
         $entityManager->persist($courier);
         $entityManager->flush();
         return $this->redirect("/couriersList");

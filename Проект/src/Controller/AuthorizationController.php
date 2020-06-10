@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AuthorizationController extends AbstractController
 {
     /**
+     * Show authorization page
      * @Route("/authorization")
      */
     public function show()
@@ -17,7 +18,5 @@ class AuthorizationController extends AbstractController
             'session' => session_id(),
         ]);
     }
-    /**
-     * @Route("/login")
-     */
+
 }

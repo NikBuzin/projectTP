@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AddManagerController extends AbstractController
 {
     /**
+     * Add managers to database
      * @Route("/addManager")
      */
     public function addManager()

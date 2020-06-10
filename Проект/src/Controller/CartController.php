@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class CartController extends AbstractController
 {
     /**
+     * Shows sales order
+
      * @Route("/cart")
      */
     public function show()
@@ -23,6 +25,7 @@ class CartController extends AbstractController
         ]);
     }
     /**
+     * Removes an item from an order.
      * @Route("/deleteFoodFromStash")
      */
     public function deleteFood(){

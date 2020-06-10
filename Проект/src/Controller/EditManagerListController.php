@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class EditManagerListController extends AbstractController
 {
     /**
+     * Show edit page
      * @Route("/editManagerList")
      */
     public function show(){
@@ -18,6 +19,7 @@ class EditManagerListController extends AbstractController
         ]);
     }
     /**
+     * Update manager information
      * @Route("/editManagerList/update")
      */
     public function update()
@@ -37,6 +39,7 @@ class EditManagerListController extends AbstractController
     }
 
     /**
+     * Remove manager information
      * @Route("/removeManagerList")
      */
     public function delete(){

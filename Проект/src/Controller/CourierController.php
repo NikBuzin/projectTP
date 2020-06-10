@@ -8,14 +8,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class CourierController extends AbstractController
 {
     /**
+     * Show couriers
      * @Route("/courier")
      */
     public function number()
     {
-        $number = random_int(0, 100);
 
-        return $this->render('courier.html.twig', [
-            'number' => $number,
-        ]);
+        return $this->render('courier.html.twig');
     }
 }

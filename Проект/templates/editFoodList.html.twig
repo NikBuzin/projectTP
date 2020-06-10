@@ -20,7 +20,6 @@
                 <div class="menu_list">
                     <ul class="menu_list-ul" >
                         <li class="accountInfo">
-                            <p>Менеджер:"Nickname"</p>
                         </li>
                         <li>
                             <div class="main-logo" style="margin-left:-120px;">
@@ -51,6 +50,9 @@
                         <p>№</p>
                     </div>
                     <div class="foodListContainer">
+                        <p>Изображение</p>
+                    </div>
+                    <div class="foodListContainer">
                         <p>Название блюда</p>
                     </div>
                     <div class="foodListContainer">
@@ -60,7 +62,7 @@
                         <p>Стоимость</p>
                     </div>
                 </div>
-                    <form action="/editFoodList/update" method="post">
+                    <form action="/editFoodList/update" method="post" enctype="multipart/form-data">
                     <div class="foodList">
                         <div class="foodListContainer">
                             <p><input name="id" type="text" value="{{ food.id }}" readonly="true"></p>
@@ -79,6 +81,8 @@
                             <input type="submit" name="submit" value="Редактировать блюдо">
                         </div>
                     </div>
+                        <p><input name="type" type="text" placeholder="1 or 2" required></p>
+                        <p><input type="file" name="image" required></p>
                     </form>
 
             </div>

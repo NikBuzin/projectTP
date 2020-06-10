@@ -33,6 +33,11 @@ class Order
      */
     private $status;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $courier_id;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -70,6 +75,18 @@ class Order
     public function setStatus(string $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getCourierId(): ?int
+    {
+        return $this->courier_id;
+    }
+
+    public function setCourierId(?int $courier_id): self
+    {
+        $this->courier_id = $courier_id;
 
         return $this;
     }

@@ -20,7 +20,6 @@
                 <div class="menu_list">
                     <ul class="menu_list-ul" >
                         <li class="accountInfo">
-                            <p>Менеджер:"Nickname"</p>
                         </li>
                         <li>
                             <div class="main-logo" style="margin-left:-120px;">
@@ -60,59 +59,39 @@
                         <p>Курьер</p>
                     </div>
                 </div>
-                <div class="activeOrdersChild">
+                {% for order in orders %}
+                    {% if order.status!='Finish' %}
+                    <div class="activeOrdersChild">
                     <div>
-                        <p>1</p>
+                        <p>{{ order.id}}</p>
                     </div>
                     <div>
-                        <p>Доступные заказы</p>
+                        <p>{{ order.description }}</p>
                     </div>
+                    <div>
+                        <p>{{ order.adress }}</p>
+                    </div>
+                    <div>
+                        <p>{{ order.status }}</p>
+                    </div>
+                    <form name="OrderToCourier" action="/orderToCourier">
                     <div class="courierMenuChildSelect">
+                        {% for courier in couriers %}
                         <p>
-                            <select name="statusCourier">
-                                <option value="s1" selected>Ожидает</option>
-                                <option value="s2">Доставлен</option>
-                            </select>
+                            {{ courier.name }}
                         </p>
+                            <p>
+                                <input value="{{ order.id }}" name="order_id" type="hidden">
+                                <input type="submit" value="Назначить на заказ">
+                                <input value="{{ courier.id }}" name="courier_id" type="hidden">
+                            </p>
+                        {% endfor %}
                     </div>
-                    <div class="courierMenuChildSelect">
-                        <p>
-                            <select name="statusCourier">
-                                <option value="s1" selected>Имя Фамилия №1</option>
-                                <option value="s2">Имя Фамилия №1</option>
-                            </select>
-                        </p>
-                    </div>
+                    </form>
                 </div>
-                <div class="activeOrdersChild">
-                    <div>
-                        <p>1</p>
-                    </div>
-                    <div>
-                        <p>Доступные заказы</p>
-                    </div>
-                    <div class="courierMenuChildSelect">
-                        <p>
-                            <select name="statusCourier">
-                                <option value="s1" selected>Ожидает</option>
-                                <option value="s2">Доставлен</option>
-                            </select>
-                        </p>
-                    </div>
-                    <div class="courierMenuChildSelect">
-                        <p>
-                            <select name="statusCourier">
-                                <option value="s1" selected>Имя Фамилия №1</option>
-                                <option value="s2">Имя Фамилия №1</option>
-                                <option value="s3">Имя Фамилия №1</option>
-                                <option value="s4">Имя Фамилия №1</option>
-                                <option value="s5">Имя Фамилия №1</option>
-                                <option value="s6">Имя Фамилия №1</option>
-                                <option value="s7">Имя Фамилия №1</option>
-                            </select>
-                        </p>
-                    </div>
-                </div>
+                    {% endif %}
+                {% endfor %}
+
             </div>
         </div>
     </div>

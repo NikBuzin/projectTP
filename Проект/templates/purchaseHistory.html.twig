@@ -20,7 +20,6 @@
                 <div class="menu_list">
                     <ul class="menu_list-ul" >
                         <li class="accountInfo">
-                            <p>Менеджер:"Nickname"</p>
                         </li>
                         <li>
                             <div class="main-logo" style="margin-left:-120px;">
@@ -51,17 +50,17 @@
                         <p>№</p>
                     </div>
                     <div>
-                        <p>"Пример заказа"</p>
+                        <p>Описание</p>
+                    </div>
+                    <div>
+                        <p>Адрес</p>
                     </div>
                     <div>
                         <p>Статус</p>
                     </div>
-                    <div>
-                        <p>Курьер</p>
-                    </div>
                 </div>
                 {% for order in orders %}
-                <div class="purchaseHistoryChild">
+                <div class="purchaseHistory">
                     <div>
                         <p>{{ order.id }}</p>
                     </div>

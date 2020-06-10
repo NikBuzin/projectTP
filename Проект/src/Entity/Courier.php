@@ -39,6 +39,11 @@ class Courier implements UserInterface
      */
     private $name;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $activity;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -125,6 +130,18 @@ class Courier implements UserInterface
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getActivity(): ?string
+    {
+        return $this->activity;
+    }
+
+    public function setActivity(string $activity): self
+    {
+        $this->activity = $activity;
 
         return $this;
     }

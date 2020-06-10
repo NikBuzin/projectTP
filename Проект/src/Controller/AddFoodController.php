@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AddFoodController extends AbstractController
 {
     /**
+     * Add food to database
      * @Route("/addFood")
      */
     public function number()
@@ -18,12 +19,11 @@ class AddFoodController extends AbstractController
         $food->setName($_REQUEST['title']);
         $food->setDescription($_REQUEST['description']);
         $food->setPrice($_REQUEST['price']);
+        $food->setType($_REQUEST['type']);
         $fileTmpName = $_FILES['image']['tmp_name'];
         $fi = finfo_open(FILEINFO_MIME_TYPE);
         $mime = (string) finfo_file($fi, $fileTmpName);
         if (strpos($mime, 'image') === false) die('Можно загружать только изображения.');
-
-        // Результат функции запишем в переменную
         $image = getimagesize($fileTmpName);
         $path = $fileTmpName ? $fileTmpName . '/' : '';
         do {

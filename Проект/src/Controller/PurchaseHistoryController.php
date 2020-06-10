@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PurchaseHistoryController extends AbstractController
 {
     /**
+     * Show order history
      * @Route("/purchaseHistory")
      */
     public function show()

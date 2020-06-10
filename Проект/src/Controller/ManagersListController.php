@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ManagersListController extends AbstractController
 {
     /**
+     * Show manager list
      * @Route("/managersList")
      */
     public function show()

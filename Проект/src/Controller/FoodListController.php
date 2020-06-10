@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class FoodListController extends AbstractController
 {
     /**
+     * Show food list
      * @Route("/foodList")
      */
     public function number()

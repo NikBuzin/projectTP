@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class EditCourierListController extends AbstractController
 {
     /**
+     * Redirect to edit page
      * @Route("/editCourierList")
      */
     public function show(){
@@ -18,6 +19,7 @@ class EditCourierListController extends AbstractController
         ]);
     }
     /**
+     * Сourier information update
      * @Route("/editCourierList/update")
      */
     public function update()
@@ -37,6 +39,7 @@ class EditCourierListController extends AbstractController
     }
 
     /**
+     * Courier information remove
      * @Route("/removeCourierList")
      */
     public function delete(){

@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class CourierListController extends AbstractController
 {
     /**
+     * Show list couriers
      * @Route("/couriersList")
      */
     public function show()

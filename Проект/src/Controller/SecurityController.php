@@ -12,6 +12,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
+     * Login to system
      * @Route("/login")
      */
     public function login()
@@ -40,13 +41,16 @@ class SecurityController extends AbstractController
             $this->redirect('/authorization');
         }
         else{
+            $orders = $this->getDoctrine()->getRepository("App:Order")->findBy(array('courier_id'=>$courier->getId()));
             return $this->render('courier.html.twig', [
                 'courier' => $courier,
+                'orders' => $orders,
             ]);
         }
     }
 
     /**
+     * logout from system
      * @Route("/logout", name="app_logout")
      */
     public function logout()

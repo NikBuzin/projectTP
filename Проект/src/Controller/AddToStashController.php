@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AddToStashController extends AbstractController
 {
     /**
+     * Adding a dish to the basket
      * @Route("/addToStash")
      */
     public function addToStash()

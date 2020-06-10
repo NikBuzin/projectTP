@@ -20,7 +20,6 @@
                 <div class="menu_list">
                     <ul class="menu_list-ul" >
                         <li class="accountInfo">
-                            <p>Менеджер:"Nickname"</p>
                         </li>
                         <li>
                             <div class="main-logo" style="margin-left:-120px;">
@@ -51,6 +50,9 @@
                         <p>№</p>
                     </div>
                     <div class="foodListContainer">
+                        <p>Изображение</p>
+                    </div>
+                    <div class="foodListContainer">
                         <p>Название блюда</p>
                     </div>
                     <div class="foodListContainer">
@@ -59,12 +61,19 @@
                     <div class="foodListContainer">
                         <p>Стоимость</p>
                     </div>
+                    <div class="foodListContainer">
+                        <p>Тип</p>
+                    </div>
                 </div>
                 {% for food in foods %}
                 <form id="EditFood">
                 <div class="foodList">
+
                     <div class="foodListContainer">
                         <p>{{ food.id }}</p>
+                    </div>
+                    <div class="foodListContainer">
+                        <p><img src="base/img/dishes/{{ food.image }}.jpg" alt=""></p>
                     </div>
                     <div class="foodListContainer">
                         <p>{{ food.name }}</p>
@@ -74,6 +83,9 @@
                     </div>
                     <div class="foodListContainer">
                         <p>{{ food.price }}</p>
+                    </div>
+                    <div class="foodListContainer">
+                        <p>{{ food.type }}</p>
                     </div>
 
                     <div class="managersButton foodButton">
@@ -92,9 +104,10 @@
                         <form id="AddManager" method="post" action="/addFood" enctype="multipart/form-data">
                             <div class="managerListEdit">
                                 <input type="file" name="image" required>
-                                <input name="title" type="text" placeholder="Название">
-                                <input name="description" type="text" placeholder="Описание">
-                                <input name="price" type="text" placeholder="Цена">
+                                <input name="title" type="text" placeholder="Название" required>
+                                <input name="description" type="text" placeholder="Описание" required>
+                                <input name="price" type="text" placeholder="Цена" required>
+                                <input name="type" type="text" placeholder="1 or 2" required>
                                 <p><input type="submit" name="submit" value="Добавить блюдо"></p>
                             </div>
                         </form>
