@@ -15,7 +15,6 @@ class CartController extends AbstractController
     public function show()
     {
         session_start();
-        dump($_SESSION['stash']);
         foreach ($_SESSION['stash'] as $id) {
             $foods[] = $this->getDoctrine()->getRepository('App:Food')->find((int)$id);
         }
@@ -33,7 +32,6 @@ class CartController extends AbstractController
         foreach ($_SESSION['stash'] as $order){
             unset($_SESSION['stash'][array_search($_GET['id'] , $_SESSION['stash'])]);
         }
-        dump($_SESSION['stash']);
         foreach ($_SESSION['stash'] as $id) {
             $foods[] = $this->getDoctrine()->getRepository('App:Food')->find((int)$id);
         }

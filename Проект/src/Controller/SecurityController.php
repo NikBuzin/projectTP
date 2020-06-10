@@ -18,7 +18,6 @@ class SecurityController extends AbstractController
     public function login()
     {
         $managers = $this->getDoctrine()->getRepository('App:Manager');
-        dump($managers);
         $manager = $managers->findOneBy([
             'login'=>$_REQUEST['login'],
             'password'=>$_REQUEST['password'],
