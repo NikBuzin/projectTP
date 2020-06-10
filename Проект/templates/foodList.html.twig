@@ -89,8 +89,9 @@
                     <a href="#" class="JsModalAddManager fancybox-inline">Добавить блюдо</a>
                     <div id="filterAddManager"></div>
                     <div id="modalFormAddManager">
-                        <form id="AddManager" method="post" action="/addFood">
+                        <form id="AddManager" method="post" action="/addFood" enctype="multipart/form-data">
                             <div class="managerListEdit">
+                                <input type="file" name="image" required>
                                 <input name="title" type="text" placeholder="Название">
                                 <input name="description" type="text" placeholder="Описание">
                                 <input name="price" type="text" placeholder="Цена">

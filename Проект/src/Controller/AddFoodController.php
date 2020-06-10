@@ -18,6 +18,10 @@ class AddFoodController extends AbstractController
         $food->setName($_REQUEST['title']);
         $food->setDescription($_REQUEST['description']);
         $food->setPrice($_REQUEST['price']);
+        dump($_FILES['image']['tmp_name']);
+        $image = addslashes(file_get_contents($_FILES
+        ['image']['tmp_name']));
+        $food->setImage($image);
         $entityManager->persist($food);
         $entityManager->flush();
         return $this->redirect("/foodList");

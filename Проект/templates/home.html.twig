@@ -60,15 +60,7 @@
                                             <form id="Cart">
                                                 <div class="infoCart">
                                                     <h2>Ваш заказ:</h2>
-                                                    {% if foodStash is defined %}
-                                                    {% for foodstash in foodStash %}
-                                                        <div class="infoCartOrder">
-                                                            <p>
-                                                                {{ foodstash.id }}. {{ foodstash.name }}
-                                                            </p>
-                                                        </div>
-                                                    {% endfor %}
-                                                    {% endif %}
+
                                                     <a href="/cart">Оформить заказ</a>
                                                 </div>
                                             </form>
@@ -99,11 +91,14 @@
                         <p>
                             {{ food.price }}
                         </p>
-                        <a href="/addToStash?id={{ food.id }}">В корзину</a>
+                        <a href="/addToStash/{{ food.id }}">В корзину</a>
                     </div>
                 </div>
             </div>
             {% endfor %}
+
+
+
         </div>
     </div>
 </section>

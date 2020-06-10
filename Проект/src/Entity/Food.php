@@ -32,6 +32,11 @@ class Food
      */
     private $price;
 
+    /**
+     * @ORM\Column(type="blob")
+     */
+    private $image;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Food
     public function setPrice(int $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
