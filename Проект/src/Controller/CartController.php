@@ -13,6 +13,7 @@ class CartController extends AbstractController
     public function show()
     {
         session_start();
+        dump($_SESSION['stash']);
         foreach ($_SESSION['stash'] as $id) {
             $foods[] = $this->getDoctrine()->getRepository('App:Food')->find((int)$id);
         }

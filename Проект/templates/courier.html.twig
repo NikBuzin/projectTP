@@ -20,7 +20,7 @@
                 <div class="menu_list">
                     <ul class="menu_list-ul" >
                         <li class="accountInfo">
-                            <p>Курьер:"Nickname"</p>
+                            <p>Курьер:"{{courier.name}}"</p>
                         </li>
                         <li>
                             <div class="main-logo" style="margin-left:-120px;">
@@ -51,44 +51,33 @@
                         <p>№</p>
                     </div>
                     <div>
-                        <p>Доступные заказы</p>
+                        <p>Описание</p>
+                    </div>
+                    <div>
+                        <p>Адрес</p>
                     </div>
                     <div>
                         <p>Статус</p>
                     </div>
                 </div>
-                <div class="courierMenuChild">
+                {% for order in orders %}
                     <div>
                         <p>1</p>
                     </div>
                     <div>
-                        <p>Доступные заказы</p>
-                    </div>
-                    <div class="courierMenuChildSelect">
-                        <p>
-                            <select name="statusCourier">
-                                <option value="s1" selected>Ожидает</option>
-                                <option value="s2">Доставлен</option>
-                            </select>
-                        </p>
-                    </div>
-                </div>
-                <div class="courierMenuChild">
-                    <div>
-                        <p>2</p>
+                        <p>{{ order.id }}</p>
                     </div>
                     <div>
-                        <p>Доступные заказы</p>
+                        <p>{{ order.description }}</p>
                     </div>
-                    <div class="courierMenuChildSelect">
-                        <p>
-                            <select name="statusCourier">
-                                <option value="s1" selected>Ожидает</option>
-                                <option value="s2">Доставлен</option>
-                            </select>
-                        </p>
+                    <div>
+                        <p>{{ order.adress }}</p>
                     </div>
-                </div>
+                    <div>
+                        <p>{{ order.status }}</p>
+                    </div>
+                {% endfor %}
+
             </div>
         </div>
     </div>

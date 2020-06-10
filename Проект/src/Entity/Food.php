@@ -33,7 +33,7 @@ class Food
     private $price;
 
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="string", length=255)
      */
     private $image;
 
@@ -78,7 +78,7 @@ class Food
         return $this;
     }
 
-    public function getImage()
+    public function getImage(): ?string
     {
         return $this->image;
     }

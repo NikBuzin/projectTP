@@ -23,6 +23,7 @@ class AddToStashController extends AbstractController
             );
         }
         $_SESSION['stash'][] = $_GET['id'];
+        array_unique($_SESSION['stash']);
         return $this->render('home.html.twig', [
             'foods' => $foods,
             'foodStash' => $food,

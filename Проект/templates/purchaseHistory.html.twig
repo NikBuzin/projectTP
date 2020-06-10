@@ -51,20 +51,17 @@
                         <p>№</p>
                     </div>
                     <div>
-                        <p>Описание</p>
-                    </div>
-                    <div>
-                        <p>Адрес</p>
+                        <p>"Пример заказа"</p>
                     </div>
                     <div>
                         <p>Статус</p>
                     </div>
-                </div>
-                <div class="purchaseHistoryChild">
-                    {% for order in orders %}
                     <div>
-                        <p>1</p>
+                        <p>Курьер</p>
                     </div>
+                </div>
+                {% for order in orders %}
+                <div class="purchaseHistoryChild">
                     <div>
                         <p>{{ order.id }}</p>
                     </div>
@@ -77,8 +74,8 @@
                     <div>
                         <p>{{ order.status }}</p>
                     </div>
-                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>

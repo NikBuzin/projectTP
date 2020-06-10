@@ -22,7 +22,7 @@ class SecurityController extends AbstractController
             'login'=>$_REQUEST['login'],
             'password'=>$_REQUEST['password'],
         ]);
-        $couriers = $this->getDoctrine()->getRepository('App:Courier')->findOneBy([
+        $courier = $this->getDoctrine()->getRepository('App:Courier')->findOneBy([
             'login'=>$_REQUEST['login'],
             'password'=>$_REQUEST['password'],
         ]);
@@ -36,12 +36,12 @@ class SecurityController extends AbstractController
                 'session' => session_id(),
             ]);
         }
-        if(!$couriers){
+        if(!$courier){
             $this->redirect('/authorization');
         }
         else{
             return $this->render('courier.html.twig', [
-                'courier' => $couriers
+                'courier' => $courier,
             ]);
         }
     }

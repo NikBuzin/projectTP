@@ -57,42 +57,36 @@
             {% for food in foods %}
             <div class="col-lg-4 cartOrder">
                 <p>
-                    {% dump(food) %}
                     {{ food.id }}. {{ food.name }}
                 </p>
                 <p>
-                    <input type="number" name="N" value="1" min="1" required>
+                    <input  type="number" name="{{ food.id }}" value="1" min="1" required>
                 </p>
                 <p>
                     <a href="/deleteFoodFromStash?id={{ food.id }}">
                         Удалить
                     </a>
                 </p>
+                <p>
+                    Ценa: {{ food.price }}
+                </p>
+
             </div>
+
             {% endfor %}
-            <div class="col-lg-12 cartOrderButton">
-                <a href="#" class="js-modal1 fancybox-inline cartOrderButtonActive">Оформить заказ</a>
-                <div id="filterOrderButton"></div>
-                <div id="modalOrderButton">
-                    <form id="OrderButton">
-                        <div class="orderButtonInfo">
-                            <input type="text" placeholder="ФИО" required>
-                            <input type="tel" placeholder="Номер телефона" required>
-                            <input type="text" placeholder="Адрес доставки" required>
-                            <div class="orderButtonInfoCheck">
-                                <input type="checkbox" required>
-                                <p>
-                                    Даю согласие на обработку персональных данных
-                                </p>
-                            </div>
-                            <div class="orderButtonInfoCheckButtons">
-                                <input type="submit" name="addOffer" formaction="/addOffer" value="Подтвердить заказ">
-                                <input type="submit" name="cancelOffer" formaction="/cancelOffer" value="Отменить заказ">
-                            </div>
-                        </div>
-                    </form>
+                <input type="text" name="FIO" placeholder="ФИО" required>
+                <input type="tel" name="Number" placeholder="Номер телефона" required>
+                <input type="text" name="adres" placeholder="Адрес доставки" required>
+                <div class="orderButtonInfoCheck">
+                    <input type="checkbox" required>
+                    <p>
+                        Даю согласие на обработку персональных данных
+                    </p>
                 </div>
-            </div>
+                <div class="orderButtonInfoCheckButtons">
+                    <input type="submit" name="addOffer" formaction="/addOffer" value="Подтвердить заказ">
+                    <input type="submit" name="cancelOffer" formaction="/cancelOffer" value="Отменить заказ">
+                </div>
             </form>
         </div>
     </div>

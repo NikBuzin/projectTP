@@ -13,15 +13,8 @@ class HomeController extends AbstractController
     public function number()
     {
         $foods = $this->getDoctrine()->getRepository('App:Food')->findAll();
-        for($i = 0; $i<count($foods); $i++)
-        {
-            if(!empty($foods[$i])){
-                $foods[$i]->setImage(base64_encode(stream_get_contents($foods[0]->getImage())));
-            }
-            else continue;
-        }
-        dump($foods[0]->getImage());
         session_start();
+        dump($_SESSION['stash']);
         return $this->render('home.html.twig', [
             'foods' => $foods,
         ]);

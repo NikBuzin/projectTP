@@ -83,7 +83,7 @@
         <div class="row dishes">
             {% for food in foods %}
             <div class="col-lg-3 foodCards">
-                <img src="base/img/dishes/kare.jpg" alt="">
+                <img src="base/img/dishes/{{ food.image }}.jpg" alt="">
                 <div class="foodCardsDescription">
                     <h2>{{ food.name }}</h2>
                     <p>{{food.description}}</p>
@@ -91,7 +91,7 @@
                         <p>
                             {{ food.price }}
                         </p>
-                        <a href="/addToStash/{{ food.id }}">В корзину</a>
+                        <a href="/addToStash?id={{ food.id }}">В корзину</a>
                     </div>
                 </div>
             </div>
