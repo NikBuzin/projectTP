@@ -10,7 +10,7 @@
 -  [Грузинская кухня](http://a0446233.xsph.ru/)
 -  [Test_video](https://drive.google.com/file/d/1HiG8FvYnXfYVharRvbV8Xagr3zh3f8dM/view?usp=sharing)
 -  [Отчет по работе](https://github.com/NikBuzin/projectTP/blob/master/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B/%D0%9E%D1%82%D1%87%D0%B5%D1%82%20%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B5%20att3.pdf)
-- [Видеопрезентация](https://youtu.be/e1XbhL7QlaY)
+- [Видеопрезентация](https://youtu.be/zbb9uYDhjPA)
 ## Список участников команды (группа 1.2) и предполагаемое распределение ролей:
 -	Бузин Никита (бэкенд)
 -	Керимов Фарид(фронтенд)
